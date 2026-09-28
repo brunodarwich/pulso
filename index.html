@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulso | Dados, território e inovação</title>
+  
+  <meta name="description" content="A Pulso trabalha com análise de dados, formação de equipes e uso de IA em processos. Conheça nossas consultorias e os projetos que desenvolvemos em Altamira.">
+  <meta property="og:title" content="Pulso | Dados, território e inovação">
+  <meta property="og:description" content="Conheça as consultorias em análise de dados e IA da Pulso e os projetos que estamos desenvolvendo em Altamira e na região.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brunodarwich.github.io/pulso/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://brunodarwich.github.io/pulso/assets/images/pulso-social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pulso — Da informação dispersa à ação">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/pulso-symbol-ui.svg">
+
+  <!-- Pré-carregamento e Tipografia Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folhas de Estilos -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animation.css">
+
+  <!-- Scripts da Aplicação Pulso -->
+  <script src="scripts/config.js" defer></script>
+  <script src="scripts/animation.js" defer></script>
+  <script src="scripts/project-motion.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Link de Acessibilidade: Pular para o Conteúdo -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ========================================================================
+       CABEÇALHO (Sticky Header)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="#inicio" class="header-brand" aria-label="Pulso — Página inicial">
+        <img src="assets/images/pulso-logo-ui.svg" alt="Pulso" class="header-logo" width="116" height="31">
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="#solucoes" class="nav-link">Soluções</a>
+        <a href="#como-trabalhamos" class="nav-link">Como trabalhamos</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+      </nav>
+
+      <!-- CTA Cabeçalho Desktop -->
+      <div class="header-cta">
+        <a href="#contato" class="btn btn-primary" data-contact-context="general">Fale com a Pulso</a>
+      </div>
+
+      <!-- Botão Menu Mobile -->
+      <button class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Gaveta de Navegação Mobile -->
+  <div id="mobile-drawer" class="mobile-drawer" inert role="dialog" aria-modal="true" aria-label="Menu móvel">
+    <button type="button" class="mobile-menu-close" aria-label="Fechar menu de navegação">Fechar <span aria-hidden="true">×</span></button>
+    <nav class="mobile-nav-links">
+      <a href="#solucoes" class="mobile-nav-link">Soluções</a>
+      <a href="#como-trabalhamos" class="mobile-nav-link">Como trabalhamos</a>
+      <a href="#projetos" class="mobile-nav-link">Projetos</a>
+      <a href="#sobre" class="mobile-nav-link">Sobre</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="#contato" class="btn btn-primary" style="width: 100%;" data-contact-context="general">Fale com a Pulso</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CONTEÚDO PRINCIPAL
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <!-- Canvas Ambiental: Dados Sendo Organizados e Estruturados -->
+      <canvas id="hero-data-canvas" class="hero-data-canvas" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <span class="eyebrow" data-reveal="fade-up">DADOS, TERRITÓRIO E INOVAÇÃO</span>
+        <h1 id="hero-title" class="hero-headline" data-reveal="hero-title">
+          O que seus dados ajudam a decidir?
+        </h1>
+        <p class="hero-support" data-reveal="fade-up">
+          Trabalhamos com organizações que precisam entender melhor seus dados e rever a forma como trabalham. Fazemos análises, formamos equipes e desenvolvemos aplicações com inteligência artificial.
+        </p>
+        <div class="hero-actions" data-reveal="fade-up">
+          <a href="#contato" class="btn btn-primary" data-contact-context="general">Vamos conversar</a>
+          <a href="#solucoes" class="btn btn-secondary">Veja como podemos ajudar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. COMO TRABALHAMOS (Demonstração Animada do Método) -->
+    <section id="como-trabalhamos" class="method-section section-spacing" aria-labelledby="method-title">
+      <div class="container">
+        <header class="method-header">
+          <span class="eyebrow">COMO TRABALHAMOS</span>
+          <h2 id="method-title" class="section-headline">
+            Começamos pelo que você precisa saber.
+          </h2>
+          <p class="section-support">
+            Antes de abrir uma planilha, conversamos com quem vai usar a análise. A partir daí, reunimos as informações disponíveis, conferimos os registros e investigamos o que eles dizem sobre a questão.
+          </p>
+        </header>
+
+        <!-- Palco Animado de Transformação -->
+        <div class="stage-wrapper">
+          <div class="stage-container" aria-label="Demonstração visual do método Pulso">
+            
+            <div class="stage-intro">
+              <span class="stage-eyebrow">UM EXEMPLO DO PROCESSO</span>
+              <h3>Como trabalhamos com os dados</h3>
+            </div>
+            <!-- Botão de Controle (Rever / Pausar / Continuar) -->
+            <div class="stage-controls">
+              <button id="stage-control-btn" class="btn-stage-control" hidden type="button" aria-live="polite">
+                <svg id="stage-control-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 1v4h4M13 13v-4h-4"/>
+                  <path d="M2.51 9a6 6 0 1 0 1.2-5.46L1 5"/>
+                </svg>
+                <span id="stage-control-text">Ver animação</span>
+              </button>
+            </div>
+
+            <!-- Grid de Conteúdo do Palco -->
+            <div class="stage-flow" aria-hidden="true">
+            <!-- Canvas SVG com Caminhos e Conexões Vetoriais -->
+            <svg class="stage-svg-canvas" viewBox="0 0 1104 380" preserveAspectRatio="none" aria-hidden="true">
+              <!-- Conexões das 4 Fontes para o Centro -->
+              <path class="flow-path path-src-1" d="M 195 90 C 260 90, 310 180, 360 180"/>
+              <path class="flow-path path-src-2" d="M 195 150 C 255 150, 305 185, 360 185"/>
+              <path class="flow-path path-src-3" d="M 195 215 C 255 215, 305 195, 360 195"/>
+              <path class="flow-path path-src-4" d="M 195 280 C 260 280, 310 200, 360 200"/>
+
+              <!-- Partículas em Movimento -->
+              <circle class="flow-particle part-1" cx="210" cy="90" r="3.5"/>
+              <circle class="flow-particle part-2" cx="210" cy="150" r="3.5"/>
+              <circle class="flow-particle part-3" cx="210" cy="215" r="3.5"/>
+              <circle class="flow-particle part-4" cx="210" cy="280" r="3.5"/>
+
+              <!-- Conexão do Centro para a Tabela de Dados Estruturados -->
+              <path class="flow-path path-center-table" d="M 450 190 L 520 190"/>
+
+              <!-- Conexões da Tabela para as 3 Saídas -->
+              <path class="flow-path path-out-1" d="M 760 190 C 805 190, 815 95, 860 95"/>
+              <path class="flow-path path-out-2" d="M 760 190 L 860 190"/>
+              <path class="flow-path path-out-3" d="M 760 190 C 805 190, 815 285, 860 285"/>
+              <circle class="flow-particle" r="3.5"/>
+              <circle class="flow-particle" r="3.5"/>
+              <circle class="flow-particle" r="3.5"/>
+              <circle class="flow-particle" r="3.5"/>
+            </svg>
+
+              <!-- ZONA 1: Fontes de Informação -->
+              <div class="zone-sources">
+                <div class="stage-mobile-phase" data-stage-phase="0"><span>01</span> Reunir fontes</div>
+                <div class="source-card card-doc">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                  </svg>
+                  <span>Documentos</span><span class="source-preview preview-document"><i></i><i></i><i></i></span>
+                </div>
+                <div class="source-card card-sheet">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                  </svg>
+                  <span>Planilhas</span><span class="source-preview preview-sheet"><i>12</i><i>—</i><i>08</i><i>?</i><i>24</i><i>—</i></span>
+                </div>
+                <div class="source-card card-records">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                  <span>Registros</span><span class="source-preview preview-record"><i>Área B</i><i>03/…</i><i>Serviço</i></span>
+                </div>
+                <div class="source-card card-public">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>Dados públicos</span><span class="source-preview preview-public"><i></i><i></i><i></i><i></i></span>
+                </div>
+
+                <!-- Fragmentos flutuantes -->
+                <div class="floating-frag frag-1"></div>
+                <div class="floating-frag frag-2"></div>
+                <div class="floating-frag frag-3"></div>
+                <div class="floating-frag frag-4"></div>
+              </div>
+
+
+              <!-- ZONA 2: Núcleo Organizador (Símbolo Pulso) -->
+              <div class="zone-pulse-hub">
+                <div class="stage-mobile-phase" data-stage-phase="1"><span>02</span> Analisar</div>
+                <div class="pulse-symbol-stage" aria-label="Símbolo Pulso">
+                  <svg viewBox="6 45 70 63" fill="none">
+                    <defs>
+                      <clipPath id="stage-clip-center"><path d="M 37 47.363281 L 44 47.363281 L 44 105.113281 L 37 105.113281 Z"/></clipPath>
+                      <clipPath id="stage-clip-left"><path d="M 8.5 66 L 15 66 L 15 86 L 8.5 86 Z"/></clipPath>
+                      <clipPath id="stage-clip-right"><path d="M 66 66 L 73 66 L 73 86 L 66 86 Z"/></clipPath>
+                    </defs>
+                    <g fill="currentColor">
+                      <!-- Barra 4 (Centro - mais alta) -->
+                      <g clip-path="url(#stage-clip-center)">
+                        <path class="stage-bar" d="M 40.75 47.36 C 42.53 47.36 43.98 48.8 43.98 50.57 L 43.98 101.9 C 43.98 103.67 42.53 105.1 40.75 105.1 C 38.97 105.1 37.52 103.67 37.52 101.9 L 37.52 50.57 C 37.52 48.8 38.97 47.36 40.75 47.36 Z"/>
+                      </g>
+                      <!-- Barra 1 (Extrema esquerda) -->
+                      <g clip-path="url(#stage-clip-left)">
+                        <path class="stage-bar" d="M 11.73 66.61 C 13.51 66.61 14.95 68.05 14.95 69.82 L 14.95 82.65 C 14.95 84.42 13.51 85.86 11.73 85.86 C 9.95 85.86 8.5 84.42 8.5 82.65 L 8.5 69.82 C 8.5 68.05 9.95 66.61 11.73 66.61 Z"/>
+                      </g>
+                      <!-- Barra 2 -->
+                      <path class="stage-bar" d="M 24.63 60.2 C 24.63 58.42 23.18 56.98 21.4 56.98 C 19.62 56.98 18.18 58.42 18.18 60.2 L 18.18 92.28 C 18.18 94.05 19.62 95.48 21.4 95.48 C 23.18 95.48 24.63 94.05 24.63 92.28 Z"/>
+                      <!-- Barra 3 -->
+                      <path class="stage-bar" d="M 31.08 63.4 C 32.86 63.4 34.3 64.84 34.3 66.61 L 34.3 85.86 C 34.3 87.63 32.86 89.07 31.08 89.07 C 29.3 89.07 27.85 87.63 27.85 85.86 L 27.85 66.61 C 27.85 64.84 29.3 63.4 31.08 63.4 Z"/>
+                      <!-- Barra 7 (Extrema direita) -->
+                      <g clip-path="url(#stage-clip-right)">
+                        <path class="stage-bar" d="M 66.55 69.82 C 66.55 68.05 68 66.61 69.78 66.61 C 71.56 66.61 73 68.05 73 69.82 L 73 82.65 C 73 84.42 71.56 85.86 69.78 85.86 C 68 85.86 66.55 84.42 66.55 82.65 Z"/>
+                      </g>
+                      <!-- Barra 6 -->
+                      <path class="stage-bar" d="M 60.1 56.98 C 61.88 56.98 63.33 58.42 63.33 60.2 L 63.33 92.28 C 63.33 94.05 61.88 95.48 60.1 95.48 C 58.32 95.48 56.88 94.05 56.88 92.28 L 56.88 60.2 C 56.88 58.42 58.32 56.98 60.1 56.98 Z"/>
+                      <!-- Barra 5 -->
+                      <path class="stage-bar" d="M 53.65 66.61 C 53.65 64.84 52.21 63.4 50.43 63.4 C 48.65 63.4 47.2 64.84 47.2 66.61 L 47.2 85.86 C 47.2 87.63 48.65 89.07 50.43 89.07 C 52.21 89.07 53.65 87.63 53.65 85.86 Z"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="pulse-steps-legend">
+                  <span class="pulse-step-tag step-organizar">Organizar</span>
+                  <span>·</span>
+                  <span class="pulse-step-tag step-relacionar">Relacionar</span>
+                  <span>·</span>
+                  <span class="pulse-step-tag step-revisar">Revisar</span>
+                </div>
+              </div>
+
+
+              <!-- ZONA 3: Tabela de Dados Estruturados -->
+              <div class="zone-structured-table">
+                <div class="stage-mobile-phase" data-stage-phase="2"><span>03</span> Estruturar</div>
+                <div class="table-header-title">Dados estruturados</div>
+                <table class="structured-table">
+                  <thead>
+                    <tr>
+                      <th>Categoria</th>
+                      <th>Local</th>
+                      <th>Fonte</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-row">
+                      <td class="status-dot-cell"><span class="dot-green"></span> Serviço</td>
+                      <td>Área A</td>
+                      <td>Registro</td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="status-dot-cell"><span class="dot-green"></span> Comércio</td>
+                      <td>Área B</td>
+                      <td>Cadastro</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- ZONA 4: Saídas e Aplicação -->
+              <div class="zone-outputs">
+                <div class="stage-mobile-phase" data-stage-phase="3"><span>04</span> Usar os resultados</div>
+                <!-- Illustrative outputs: each detail follows the stage's shared clock. -->
+                <div class="output-card output-map">
+                  <div class="output-heading"><span class="output-label">Mapa do território</span><span class="result-note">Exemplo</span></div>
+                  <div class="mini-map-visual">
+                    <svg class="mini-map-svg" viewBox="0 0 240 100" fill="none">
+                      <rect width="240" height="100" fill="#F0F3EC"/>
+                      <path d="M 205 -10 C 180 23 242 56 224 110" stroke="#C0DCE5" stroke-width="25"/>
+                      <g fill="#E0E7D9" stroke="#D4DECD"><rect x="9" y="8" width="48" height="25" rx="4"/><rect x="72" y="8" width="46" height="25" rx="4"/><rect x="132" y="8" width="41" height="25" rx="4"/><rect x="13" y="49" width="48" height="35" rx="4"/><rect x="77" y="50" width="43" height="36" rx="4"/><rect x="136" y="51" width="41" height="35" rx="4"/></g>
+                      <path d="M 0 41 H 206 M 64 0 L 70 100 M 126 0 L 128 100 M 184 0 L 189 100" stroke="white" stroke-width="5"/>
+                      <g transform="translate(42 47)"><g class="result-pin" data-result="pin" data-order="0"><ellipse cy="2" rx="8" ry="2.5" fill="#28785A" opacity=".16"/><path d="M 0 0 C -3 -5 -9 -9 -9 -15 A 9 9 0 1 1 9 -15 C 9 -9 3 -5 0 0 Z" fill="#28785A" stroke="white" stroke-width="1.5"/><path d="M -3 -13 H 3 M 0 -16 V -10" stroke="white" stroke-width="1.3" stroke-linejoin="round" fill="none"/></g></g><g transform="translate(95 70)"><g class="result-pin" data-result="pin" data-order="1"><ellipse cy="2" rx="8" ry="2.5" fill="#427CA5" opacity=".16"/><path d="M 0 0 C -3 -5 -9 -9 -9 -15 A 9 9 0 1 1 9 -15 C 9 -9 3 -5 0 0 Z" fill="#427CA5" stroke="white" stroke-width="1.5"/><path d="M -4 -12 L 0 -16 L 4 -12 M -3 -12 V -7 H 3 V -12" stroke="white" stroke-width="1.3" stroke-linejoin="round" fill="none"/></g></g><g transform="translate(146 43)"><g class="result-pin" data-result="pin" data-order="2"><ellipse cy="2" rx="8" ry="2.5" fill="#AD7138" opacity=".16"/><path d="M 0 0 C -3 -5 -9 -9 -9 -15 A 9 9 0 1 1 9 -15 C 9 -9 3 -5 0 0 Z" fill="#AD7138" stroke="white" stroke-width="1.5"/><path d="M -4 -15 H 4 V -11 H -4 Z M -3 -11 V -7 H 3 V -11" stroke="white" stroke-width="1.3" stroke-linejoin="round" fill="none"/></g></g><g transform="translate(193 76)"><g class="result-pin" data-result="pin" data-order="3"><ellipse cy="2" rx="8" ry="2.5" fill="#8564A7" opacity=".16"/><path d="M 0 0 C -3 -5 -9 -9 -9 -15 A 9 9 0 1 1 9 -15 C 9 -9 3 -5 0 0 Z" fill="#8564A7" stroke="white" stroke-width="1.5"/><path d="M -3 -15 H 3 V -8 H -3 Z" stroke="white" stroke-width="1.3" stroke-linejoin="round" fill="none"/></g></g>
+                    </svg>
+                  </div>
+                  <div class="map-key"><span>Serviços</span><span>Comércio</span><span>Registros</span><span>Moradia</span></div>
+                </div>
+                <div class="output-card output-metrics">
+                  <div class="output-heading"><span class="output-label">Indicadores</span><span class="result-note">Dados fictícios</span></div>
+                  <div class="result-stats">
+                    <div data-result="stat"><strong data-count="24">24</strong><span>registros</span></div>
+                    <div data-result="stat"><strong data-count="8">8</strong><span>áreas</span></div>
+                    <div data-result="stat"><strong data-count="3">3</strong><span>categorias</span></div>
+                  </div>
+                  <div class="result-charts">
+                    <div><svg viewBox="0 0 110 72" fill="none"><path d="M 5 20 H 106 M 5 42 H 106 M 5 65 H 106" stroke="#E8EDEA"/><rect data-result="bar" data-order="0" x="8" y="43" width="15" height="22" rx="3" fill="#8CB8A0"/><rect data-result="bar" data-order="1" x="32" y="27" width="15" height="38" rx="3" fill="#4E8D75"/><rect data-result="bar" data-order="2" x="56" y="35" width="15" height="30" rx="3" fill="#7EACCE"/><rect data-result="bar" data-order="3" x="80" y="14" width="15" height="51" rx="3" fill="#427CA5"/></svg><span>Por área</span></div>
+                    <div><svg viewBox="0 0 76 72" fill="none"><circle cx="38" cy="35" r="23" stroke="#EDF0F4" stroke-width="10"/><g transform="rotate(-90 38 35)"><circle data-result="ring" cx="38" cy="35" r="23" pathLength="100" stroke="#8564A7" stroke-width="10" stroke-dasharray="55 100"/><circle data-result="ring" data-order="1" cx="38" cy="35" r="23" pathLength="100" stroke="#D2A465" stroke-width="10" stroke-dasharray="28 100" stroke-dashoffset="-59"/></g></svg><span>Distribuição</span></div>
+                  </div>
+                  <svg class="result-trend" viewBox="0 0 220 32" fill="none"><path d="M 4 27 L 39 21 L 75 24 L 110 12 L 145 16 L 179 7 L 216 4" stroke="#427CA5" stroke-width="2" stroke-linecap="round" pathLength="100" data-result="trend"/></svg>
+                </div>
+                <div class="output-card output-action">
+                  <div class="output-heading"><span class="output-label">Próxima ação</span><span class="result-note">Aplicação</span></div>
+                  <div class="result-action" data-result="action"><span class="result-check">✓</span><div><strong>Priorizar uma área</strong><span>Usar os dados para orientar a decisão.</span></div></div>
+                  <div class="result-action secondary" data-result="action" data-order="1"><span class="result-check">→</span><div><strong>Acompanhar os resultados</strong></div></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="stage-timeline" aria-hidden="true">
+              <div class="stage-phase" data-stage-phase="0"><span>01</span> Reunir fontes</div>
+              <div class="stage-phase" data-stage-phase="1"><span>02</span> Analisar</div>
+              <div class="stage-phase" data-stage-phase="2"><span>03</span> Estruturar</div>
+              <div class="stage-phase" data-stage-phase="3"><span>04</span> Usar os resultados</div>
+            </div>
+            <!-- Descrição Textual de Acessibilidade -->
+            <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
+              Informações dispersas em documentos, planilhas e registros são reunidas, organizadas e relacionadas. A análise transforma essas fontes em dados estruturados, mapas, indicadores e recomendações.
+            </div>
+
+          </div>
+          <!-- Legenda Permanente -->
+          <p class="stage-caption">
+            Mapa, números e gráficos ilustrativos. As fontes de dados e o que entregamos dependem de cada projeto.
+          </p>
+        </div>
+
+        <!-- Quatro Etapas do Método -->
+        <div class="method-steps">
+          <div class="step-card">
+            <div class="step-number">01 · Entender</div>
+            <h3 class="step-title">Entender o problema</h3>
+            <p class="step-description">Conversamos sobre o problema e sobre as decisões que a equipe precisa tomar.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">02 · Organizar</div>
+            <h3 class="step-title">Reunir as informações</h3>
+            <p class="step-description">Conferimos as fontes disponíveis, organizamos os registros e identificamos o que ainda falta.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">03 · Interpretar</div>
+            <h3 class="step-title">Examinar os resultados</h3>
+            <p class="step-description">Buscamos padrões e discutimos os resultados com quem conhece o assunto de perto.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">04 · Aplicar</div>
+            <h3 class="step-title">Levar para a rotina</h3>
+            <p class="step-description">Definimos com a equipe como os resultados podem ajudar no trabalho e o que vale acompanhar.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. CONSULTORIAS (Consultorias) -->
+    <section id="solucoes" class="consulting-section section-spacing" aria-labelledby="consulting-title">
+      <div class="container">
+        <header class="consulting-header">
+          <span class="eyebrow">CONSULTORIAS</span>
+          <h2 id="consulting-title" class="section-headline">
+            Consultoria em dados e inteligência artificial.
+          </h2>
+          <p class="section-support">
+            Podemos ajudar sua organização a usar melhor os dados que já tem ou a avaliar onde a inteligência artificial pode ser útil.
+          </p>
+        </header>
+
+        <div class="consulting-grid">
+          <!-- Consultoria 1: Cultura de Análise de Dados -->
+          <article class="consulting-card">
+            <div>
+              <div class="consulting-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="consulting-title">Análise de dados no dia a dia</h3>
+              <p class="consulting-desc">
+                Trabalhamos com sua equipe para interpretar indicadores e responder às perguntas que aparecem na rotina. A consultoria inclui formação e a definição de uma rotina de análise.
+              </p>
+              <div class="consulting-topics">
+                Para equipes que querem usar dados com mais autonomia.
+              </div>
+            </div>
+            <div class="consulting-footer">
+              <a href="#contato" class="link-action" data-contact-context="culturaDados">
+                Conversar sobre análise de dados <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Consultoria 2: Inovação de Processos com IA -->
+          <article class="consulting-card">
+            <div>
+              <div class="consulting-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="15" x2="23" y2="15"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="15" x2="4" y2="15"></line>
+                </svg>
+              </div>
+              <h3 class="consulting-title">IA nos processos da organização</h3>
+              <p class="consulting-desc">
+                Examinamos como o trabalho é feito e onde a IA pode ajudar. Testamos aplicações com a equipe antes de incorporá-las aos processos.
+              </p>
+              <div class="consulting-topics">
+                Para avaliar usos de IA e testar o que funciona na sua rotina.
+              </div>
+            </div>
+            <div class="consulting-footer">
+              <a href="#contato" class="link-action" data-contact-context="processosIA">
+                Conversar sobre IA <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. NOSSOS PROJETOS (Portfólio) -->
+    <section id="projetos" class="projects-section section-spacing" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="projects-header">
+          <span class="eyebrow">NOSSOS PROJETOS</span>
+          <h2 id="projects-title" class="section-headline">
+            O que estamos desenvolvendo
+          </h2>
+          <p class="section-support">
+            Além das consultorias, temos projetos próprios em desenvolvimento. Eles tratam de questões que vemos de perto em Altamira e na região.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card project--territorio">
+            <div class="project-visual" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="none" color="#A94E31" aria-hidden="true" focusable="false" class="project-artwork"><rect x="0" y="0" width="540" height="260" rx="0" fill="#F6EFE7" stroke="none" /><rect x="-20" y="-16" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="-14" y="-10" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="12" y="-9" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="55" y="-16" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="61" y="-10" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="87" y="-9" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="130" y="-16" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="136" y="-10" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="162" y="-9" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="205" y="-16" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="211" y="-10" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="237" y="-9" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="280" y="-16" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="286" y="-10" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="312" y="-9" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="355" y="-16" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="361" y="-10" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="387" y="-9" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="-20" y="47" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="-14" y="53" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="12" y="54" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="55" y="47" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="61" y="53" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="87" y="54" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="130" y="47" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="136" y="53" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="162" y="54" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="205" y="47" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="211" y="53" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="237" y="54" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="280" y="47" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="286" y="53" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="312" y="54" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="355" y="47" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="361" y="53" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="387" y="54" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="-20" y="110" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="-14" y="116" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="12" y="117" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="55" y="110" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="61" y="116" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="87" y="117" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="130" y="110" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="136" y="116" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="162" y="117" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="205" y="110" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="211" y="116" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="237" y="117" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="280" y="110" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="286" y="116" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="312" y="117" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="355" y="110" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="361" y="116" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="387" y="117" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="-20" y="173" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="-14" y="179" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="12" y="180" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="55" y="173" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="61" y="179" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="87" y="180" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="130" y="173" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="136" y="179" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="162" y="180" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="205" y="173" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="211" y="179" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="237" y="180" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="280" y="173" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="286" y="179" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="312" y="180" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="355" y="173" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="361" y="179" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="387" y="180" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="-20" y="236" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="-14" y="242" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="12" y="243" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="55" y="236" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="61" y="242" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="87" y="243" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="130" y="236" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="136" y="242" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="162" y="243" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="205" y="236" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="211" y="242" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="237" y="243" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="280" y="236" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="286" y="242" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="312" y="243" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><rect x="355" y="236" width="60" height="47" rx="5" fill="#EADCCD" stroke="none" /><rect x="361" y="242" width="20" height="14" rx="2" fill="#F7EFE5" stroke="none" /><rect x="387" y="243" width="20" height="30" rx="2" fill="#F7EFE5" stroke="none" /><path d="M 406 -20 C 388 59 483 103 454 176 S 449 264 500 283" fill="none" stroke="#D6E7D5" stroke-width="88" stroke-linecap="round" stroke-linejoin="round" /><path d="M 415 -20 C 398 59 493 103 464 176 S 459 264 510 283" fill="none" stroke="#B9DBE9" stroke-width="62" stroke-linecap="round" stroke-linejoin="round" /><path d="M 426 -20 C 409 59 504 103 475 176 S 470 264 521 283" fill="none" stroke="#E4F2F7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(34 66) scale(0.8)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(331 62) scale(0.8)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(385 197) scale(1)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(37 214) scale(1)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(271 241) scale(0.7)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(368 104) scale(0.6)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g data-motion-part="pin"><g transform="translate(130 104) scale(1)"><ellipse cy="5" rx="14" ry="4" fill="#B45637" opacity=".15" /><path d="M 0 0 C -6 -9 -20 -22 -20 -34 A 20 20 0 1 1 20 -34 C 20 -22 6 -9 0 0 Z" fill="#B45637" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(0 -34)"><path d="M -9 -4 L -6 -9 H 6 L 9 -4 V 0 H -9 Z M -7 0 V 9 H 7 V 0 M -2 9 V 3 H 3 V 9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g></g><g data-motion-part="pin"><g transform="translate(294 163) scale(1)"><ellipse cy="5" rx="14" ry="4" fill="#B45637" opacity=".15" /><path d="M 0 0 C -6 -9 -20 -22 -20 -34 A 20 20 0 1 1 20 -34 C 20 -22 6 -9 0 0 Z" fill="#B45637" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(0 -34)"><path d="M -9 0 L 0 -8 L 9 0 M -6 -2 V 9 H 6 V -2 M -2 9 V 3 H 2 V 9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g></g><g data-motion-part="pin"><g transform="translate(174 222) scale(0.85)"><ellipse cy="5" rx="14" ry="4" fill="#B45637" opacity=".15" /><path d="M 0 0 C -6 -9 -20 -22 -20 -34 A 20 20 0 1 1 20 -34 C 20 -22 6 -9 0 0 Z" fill="#B45637" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(0 -34)"><path d="M -7 0 H 7 M 0 -7 V 7" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g></g><rect x="22" y="18" width="138" height="25" rx="12" fill="#FFFFFF" stroke="none" /><text x="35" y="35" font-family="Arial, sans-serif" font-size="10" fill="#925037" font-weight="700">COMÉRCIO · SERVIÇOS</text><text x="312" y="241" font-family="Arial, sans-serif" font-size="10" fill="#776B62" font-weight="400">Mapa ilustrativo</text></svg>
+            </div>
+            <div class="project-info">
+            <div class="project-meta">
+              <span class="status-badge">Em desenvolvimento</span>
+            </div>
+            <h3 class="project-title">Lá na Brasília</h3>
+            <p class="project-highlight">Um mapa do bairro Brasília, em Altamira.</p>
+            <p class="project-desc">
+              Estamos reunindo informações sobre o comércio, os serviços e a infraestrutura do bairro. A proposta é criar uma fonte de consulta para moradores, negócios e gestão local.
+            </p>
+            <a href="#contato" class="link-action" data-contact-context="laNaBrasilia">
+              Falar sobre o Lá na Brasília <span class="arrow">↗</span>
+            </a>
+          </div>
+          </article>
+
+          <article class="project-card project--saude">
+            <div class="project-visual" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="none" color="#226E9B" aria-hidden="true" focusable="false" class="project-artwork"><rect x="0" y="0" width="540" height="260" rx="0" fill="#F1F8FC" stroke="none" /><circle cx="486" cy="28" r="105" fill="#DDEEF8" stroke="none" /><circle cx="38" cy="268" r="108" fill="#E0F0F8" stroke="none" /><g data-motion-part="card"><rect x="38" y="35" width="219" height="78" rx="12" fill="#D7E9F2" stroke="none" /><rect x="38" y="31" width="219" height="78" rx="12" fill="white" stroke="#C5E0EF" /><rect x="50" y="46" width="47" height="48" rx="10" fill="#E8F3FA" stroke="none" /><circle cx="73" cy="62" r="9" fill="#8BAEC6" stroke="none" /><path d="M 58 91 Q 59 71 73 74 Q 87 71 88 91" fill="#538CB1" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="110" y="63" font-family="Arial, sans-serif" font-size="13" fill="#234E68" font-weight="700">Clínica geral</text><text x="110" y="82" font-family="Arial, sans-serif" font-size="10" fill="#648194" font-weight="400">Profissionais</text><circle cx="237" cy="50" r="9" fill="#2C7CAB" stroke="none" /><path d="M 233 50 H 241 M 237 46 V 54" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g><g data-motion-part="card"><rect x="283" y="53" width="219" height="78" rx="12" fill="#D7E9F2" stroke="none" /><rect x="283" y="49" width="219" height="78" rx="12" fill="white" stroke="#C5E0EF" /><rect x="295" y="64" width="47" height="48" rx="10" fill="#E8F3FA" stroke="none" /><circle cx="318" cy="80" r="9" fill="#8BAEC6" stroke="none" /><path d="M 303 109 Q 304 89 318 92 Q 332 89 333 109" fill="#538CB1" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="355" y="81" font-family="Arial, sans-serif" font-size="13" fill="#234E68" font-weight="700">Pediatria</text><text x="355" y="100" font-family="Arial, sans-serif" font-size="10" fill="#648194" font-weight="400">Especialidades</text><circle cx="482" cy="68" r="9" fill="#2C7CAB" stroke="none" /><path d="M 478 68 H 486 M 482 64 V 72" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g><g data-motion-part="card"><rect x="38" y="151" width="219" height="78" rx="12" fill="#D7E9F2" stroke="none" /><rect x="38" y="147" width="219" height="78" rx="12" fill="white" stroke="#C5E0EF" /><rect x="50" y="162" width="47" height="48" rx="10" fill="#E8F3FA" stroke="none" /><circle cx="73" cy="178" r="9" fill="#8BAEC6" stroke="none" /><path d="M 58 207 Q 59 187 73 190 Q 87 187 88 207" fill="#538CB1" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="110" y="179" font-family="Arial, sans-serif" font-size="13" fill="#234E68" font-weight="700">Psicologia</text><text x="110" y="198" font-family="Arial, sans-serif" font-size="10" fill="#648194" font-weight="400">Cuidado</text><circle cx="237" cy="166" r="9" fill="#2C7CAB" stroke="none" /><path d="M 233 166 H 241 M 237 162 V 170" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g><g data-motion-part="card"><rect x="283" y="169" width="219" height="78" rx="12" fill="#D7E9F2" stroke="none" /><rect x="283" y="165" width="219" height="78" rx="12" fill="white" stroke="#C5E0EF" /><rect x="295" y="180" width="47" height="48" rx="10" fill="#E8F3FA" stroke="none" /><circle cx="318" cy="196" r="9" fill="#8BAEC6" stroke="none" /><path d="M 303 225 Q 304 205 318 208 Q 332 205 333 225" fill="#538CB1" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="355" y="197" font-family="Arial, sans-serif" font-size="13" fill="#234E68" font-weight="700">Odontologia</text><text x="355" y="216" font-family="Arial, sans-serif" font-size="10" fill="#648194" font-weight="400">Serviços</text><circle cx="482" cy="184" r="9" fill="#2C7CAB" stroke="none" /><path d="M 478 184 H 486 M 482 180 V 188" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g></svg>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="status-badge">Em desenvolvimento</span>
+              </div>
+              <h3 class="project-title">Guia de Saúde</h3>
+              <p class="project-highlight">Onde encontrar profissionais e serviços de saúde.</p>
+              <p class="project-desc">O guia está sendo desenvolvido para reunir essas informações em um só lugar e facilitar a busca de quem precisa de atendimento.</p>
+              <a href="#contato" class="link-action" data-contact-context="guiaDeSaude">
+                Falar sobre o Guia de Saúde <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+
+
+          <article class="project-card project--dados">
+            <div class="project-visual" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="none" color="#4E5AB5" aria-hidden="true" focusable="false" class="project-artwork"><rect x="0" y="0" width="540" height="260" rx="0" fill="#F0F1FA" stroke="none" /><rect x="26" y="24" width="488" height="216" rx="12" fill="#FFFFFF" stroke="#DCE0F3" /><rect x="26" y="24" width="99" height="216" rx="12" fill="#E9ECF9" stroke="none" /><text x="41" y="50" font-family="Arial, sans-serif" font-size="14" fill="#4E5AB5" font-weight="700">pontoATM</text><rect x="35" y="67" width="80" height="24" rx="5" fill="white" stroke="none" /><circle cx="44" cy="78" r="3" fill="#7F89CC" stroke="none" /><text x="53" y="82" font-family="Arial, sans-serif" font-size="10" fill="#576393" font-weight="400">Visão geral</text><circle cx="44" cy="108" r="3" fill="#7F89CC" stroke="none" /><text x="53" y="112" font-family="Arial, sans-serif" font-size="10" fill="#576393" font-weight="400">Território</text><circle cx="44" cy="138" r="3" fill="#7F89CC" stroke="none" /><text x="53" y="142" font-family="Arial, sans-serif" font-size="10" fill="#576393" font-weight="400">População</text><circle cx="44" cy="168" r="3" fill="#7F89CC" stroke="none" /><text x="53" y="172" font-family="Arial, sans-serif" font-size="10" fill="#576393" font-weight="400">Ambiente</text><text x="142" y="49" font-family="Arial, sans-serif" font-size="12" fill="#424C85" font-weight="700">Informações que se conectam</text><rect x="141" y="66" width="205" height="144" rx="8" fill="#F7F8FD" stroke="none" /><text x="154" y="85" font-family="Arial, sans-serif" font-size="11" fill="#626D9D" font-weight="400">Séries históricas</text><path d="M 154 107 H 332" fill="none" stroke="#E3E6F3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><path d="M 154 137 H 332" fill="none" stroke="#E3E6F3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><path d="M 154 167 H 332" fill="none" stroke="#E3E6F3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><path d="M 154 196 H 332" fill="none" stroke="#E3E6F3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><rect x="161" y="172" width="15" height="24" rx="3" fill="#BBC3E8" stroke="none" data-motion-part="bar" /><rect x="188" y="156" width="15" height="40" rx="3" fill="#BBC3E8" stroke="none" data-motion-part="bar" /><rect x="215" y="163" width="15" height="33" rx="3" fill="#BBC3E8" stroke="none" data-motion-part="bar" /><rect x="242" y="142" width="15" height="54" rx="3" fill="#BBC3E8" stroke="none" data-motion-part="bar" /><rect x="269" y="125" width="15" height="71" rx="3" fill="#BBC3E8" stroke="none" data-motion-part="bar" /><rect x="296" y="113" width="15" height="83" rx="3" fill="#BBC3E8" stroke="none" data-motion-part="bar" /><path d="M 163 163 L 195 144 L 221 151 L 249 124 L 278 118 L 312 100" fill="none" stroke="#596AC2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><rect x="361" y="66" width="135" height="144" rx="8" fill="#EFF1FA" stroke="none" /><text x="375" y="85" font-family="Arial, sans-serif" font-size="11" fill="#626D9D" font-weight="400">Território</text><path d="M 377 158 L 424 137 L 479 156 L 433 179 Z" fill="#E0E5F7" stroke="#8797D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /><path d="M 377 140 L 424 119 L 479 138 L 433 161 Z" fill="#E0E5F7" stroke="#8797D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /><path d="M 377 122 L 424 101 L 479 120 L 433 143 Z" fill="#B9C4EA" stroke="#8797D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="430" cy="121" r="5" fill="#5566AD" stroke="none" /><text x="142" y="226" font-family="Arial, sans-serif" font-size="10" fill="#737C99" font-weight="400">Fontes públicas · consulta e comparação</text></svg>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="status-badge">Em desenvolvimento</span>
+              </div>
+              <h3 class="project-title">pontoATM</h3>
+              <p class="project-highlight">Dados públicos de Altamira organizados para consulta.</p>
+              <p class="project-desc">Estamos mapeando as fontes disponíveis sobre a cidade. O objetivo é facilitar a consulta e a comparação de informações que hoje estão espalhadas.</p>
+              <a href="#contato" class="link-action" data-contact-context="pontoAtm">
+                Falar sobre o pontoATM <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card project--producao">
+            <div class="project-visual" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="none" color="#956A1D" aria-hidden="true" focusable="false" class="project-artwork"><rect x="0" y="0" width="540" height="260" rx="0" fill="#FBF6EB" stroke="none" /><circle cx="270" cy="145" r="110" fill="#F5E7C7" stroke="none" /><path d="M 113 141 C 146 141 151 118 178 118 M 355 120 C 389 120 390 140 427 140" fill="none" stroke="#BC9246" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 6" data-motion-part="route" /><circle cx="79" cy="134" r="36" fill="#FFFFFF" stroke="#D6BC83" /><g transform="translate(79 131) scale(1.8)"><path d="M -6 7 Q -11 -7 8 -8 Q 12 7 -6 7 M -6 7 L 5 -4" fill="none" stroke="#A17526" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></g><text x="49" y="189" font-family="Arial, sans-serif" font-size="12" fill="#856328" font-weight="700">Produtores</text><circle cx="461" cy="134" r="36" fill="#FFFFFF" stroke="#D6BC83" /><g transform="translate(461 131) scale(1.8)"><path d="M -9 -4 L -6 -9 H 6 L 9 -4 V 0 H -9 Z M -7 0 V 9 H 7 V 0 M -2 9 V 3 H 3 V 9" fill="none" stroke="#A17526" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></g><text x="431" y="189" font-family="Arial, sans-serif" font-size="12" fill="#856328" font-weight="700">Compradores</text><path d="M 229 140 C 201 81 233 69 250 124 C 241 49 275 48 274 116 C 303 57 327 84 292 132" fill="#87A169" stroke="#668655" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /><path d="M 241 130 C 205 106 203 142 245 164 C 267 145 270 136 241 130" fill="#E3B84E" stroke="#C99935" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /><circle cx="282" cy="130" r="21" fill="#9DAB5D" stroke="none" /><circle cx="310" cy="141" r="18" fill="#C37943" stroke="none" /><circle cx="266" cy="151" r="22" fill="#D8A956" stroke="none" /><path d="M 202 154 H 334 L 318 214 H 218 Z" fill="#C69A58" stroke="#A87935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M 211 171 H 329 M 215 187 H 324 M 219 202 H 321 M 232 158 L 239 213 M 253 158 L 255 213 M 275 158 V 213 M 296 158 L 291 213 M 317 158 L 309 213" fill="none" stroke="#E7C78E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><rect x="196" y="150" width="143" height="12" rx="5" fill="#B68844" stroke="none" /><text x="208" y="239" font-family="Arial, sans-serif" font-size="12" fill="#8D6A2E" font-weight="700">Da produção à mesa</text></svg>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="status-badge">Em desenvolvimento</span>
+              </div>
+              <h3 class="project-title">da Roça</h3>
+              <p class="project-highlight">Agricultura familiar e compradores da região.</p>
+              <p class="project-desc">O projeto busca facilitar o contato entre agricultores familiares e pequenos e médios compradores interessados na produção local.</p>
+              <a href="#contato" class="link-action" data-contact-context="daRoca">
+                Falar sobre o da Roça <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card project--pesquisa">
+            <div class="project-visual" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="none" color="#8052A5" aria-hidden="true" focusable="false" class="project-artwork"><rect x="0" y="0" width="540" height="260" rx="0" fill="#F6F1FB" stroke="none" /><circle cx="70" cy="252" r="104" fill="#EAE2F5" stroke="none" /><circle cx="509" cy="18" r="98" fill="#EAE2F5" stroke="none" /><g data-motion-part="article"><g transform="rotate(-8 155 130)"><rect x="51" y="32" width="188" height="194" rx="9" fill="#EDE5F7" stroke="#D8C8EB" /></g></g><g data-motion-part="article"><g transform="rotate(-3 155 130)"><rect x="61" y="38" width="188" height="194" rx="9" fill="#F8F4FC" stroke="#D8C8EB" /></g></g><rect x="72" y="48" width="186" height="190" rx="9" fill="#FFFFFF" stroke="#D8C8EB" /><rect x="89" y="65" width="54" height="19" rx="9" fill="#F0E8F8" stroke="none" /><text x="99" y="78" font-family="Arial, sans-serif" font-size="9" fill="#8553AC" font-weight="700">ARTIGO</text><text x="89" y="109" font-family="Arial, sans-serif" font-size="16" fill="#564268" font-weight="700">Pesquisas sobre</text><text x="89" y="132" font-family="Arial, sans-serif" font-size="16" fill="#564268" font-weight="700">Altamira e região</text><rect x="90" y="152" width="144" height="3" rx="1" fill="#E2DAEB" stroke="none" /><rect x="90" y="162" width="126" height="3" rx="1" fill="#E2DAEB" stroke="none" /><rect x="90" y="172" width="138" height="3" rx="1" fill="#E2DAEB" stroke="none" /><rect x="90" y="193" width="87" height="3" rx="1" fill="#E2DAEB" stroke="none" /><rect x="90" y="203" width="101" height="3" rx="1" fill="#E2DAEB" stroke="none" /><circle cx="225" cy="184" r="31" fill="#EEE8F7" stroke="#75528D" /><circle cx="225" cy="184" r="23" fill="white" stroke="#C8B6D9" /><path d="M 249 208 L 269 229" fill="none" stroke="#75528D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" /><rect x="287" y="42" width="222" height="183" rx="12" fill="#FFFFFF" stroke="#DFD1EC" /><text x="303" y="67" font-family="Arial, sans-serif" font-size="13" fill="#614776" font-weight="700">Encontre por tema</text><rect x="302" y="83" width="111" height="24" rx="12" fill="#F0E9F7" stroke="none" /><text x="312" y="99" font-family="Arial, sans-serif" font-size="10" fill="#775590" font-weight="400">Meio ambiente</text><rect x="420" y="83" width="73" height="24" rx="12" fill="#F0E9F7" stroke="none" /><text x="430" y="99" font-family="Arial, sans-serif" font-size="10" fill="#775590" font-weight="400">Sociedade</text><rect x="302" y="116" width="77" height="24" rx="12" fill="#F0E9F7" stroke="none" /><text x="312" y="132" font-family="Arial, sans-serif" font-size="10" fill="#775590" font-weight="400">Educação</text><rect x="386" y="116" width="63" height="24" rx="12" fill="#F0E9F7" stroke="none" /><text x="396" y="132" font-family="Arial, sans-serif" font-size="10" fill="#775590" font-weight="400">Saúde</text><rect x="302" y="149" width="79" height="24" rx="12" fill="#F0E9F7" stroke="none" /><text x="312" y="165" font-family="Arial, sans-serif" font-size="10" fill="#775590" font-weight="400">Território</text><rect x="388" y="149" width="66" height="24" rx="12" fill="#F0E9F7" stroke="none" /><text x="398" y="165" font-family="Arial, sans-serif" font-size="10" fill="#775590" font-weight="400">Cultura</text><text x="303" y="205" font-family="Arial, sans-serif" font-size="15" fill="#78509A" font-weight="700">1990 — 2026</text></svg>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span class="status-badge">Em desenvolvimento</span></div>
+              <h3 class="project-title">Rede Acadêmica</h3>
+              <p class="project-highlight">Um hub para encontrar artigos sobre Altamira e região, publicados de 1990 a 2026 e filtrados por temas.</p>
+              <a href="#contato" class="link-action" data-contact-context="redeAcademica">Falar sobre a Rede Acadêmica <span class="arrow">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcerias" class="partnerships-section section-spacing" aria-labelledby="partnerships-title">
+      <div class="container">
+        <header class="partnerships-header">
+          <h2 id="partnerships-title" class="section-headline">Colaborações</h2>
+          <p class="section-support">Também ajudamos a desenvolver iniciativas de parceiros.</p>
+        </header>
+          <article class="project-card project--turismo partnership-card">
+            <div class="project-visual" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="none" color="#287250" aria-hidden="true" focusable="false" class="project-artwork"><rect x="0" y="0" width="540" height="260" rx="0" fill="#EEF5EB" stroke="none" /><path d="M 0 94 Q 85 19 185 78 T 373 69 T 540 50 V 260 H 0 Z" fill="#D8E7D5" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M 0 165 Q 87 92 195 134 T 385 120 T 540 125 V 260 H 0 Z" fill="#BBD4B9" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M 335 -20 C 259 47 407 86 318 140 S 255 217 335 280" fill="none" stroke="#B2D8DF" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" /><path d="M 340 -20 C 264 47 412 86 323 140 S 260 217 340 280" fill="none" stroke="#DAEEF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(29 103) scale(1.2)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(62 132) scale(0.85)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(111 70) scale(0.7)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(202 94) scale(0.9)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(484 99) scale(1.2)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(513 142) scale(0.9)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(445 219) scale(1.15)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(484 244) scale(0.8)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(27 245) scale(1.3)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(75 220) scale(0.7)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><g transform="translate(197 250) scale(0.85)"><path d="M 0 0 V -23" fill="none" stroke="#6B8C76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><circle cx="-7" cy="-23" r="11" fill="#BED4B7" stroke="none" /><circle cx="6" cy="-26" r="12" fill="#A5C6A2" stroke="none" /><circle cx="0" cy="-34" r="10" fill="#C7DCBC" stroke="none" /></g><path d="M 115 113 C 113 181 246 118 249 185 S 397 223 415 127" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path d="M 115 113 C 113 181 246 118 249 185 S 397 223 415 127" fill="none" stroke="#35775B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7" data-motion-part="route" /><g data-motion-part="pin"><g transform="translate(115 117) scale(0.8)"><ellipse cy="5" rx="14" ry="4" fill="#287250" opacity=".15" /><path d="M 0 0 C -6 -9 -20 -22 -20 -34 A 20 20 0 1 1 20 -34 C 20 -22 6 -9 0 0 Z" fill="#287250" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(0 -34)"><path d="M -6 7 Q -11 -7 8 -8 Q 12 7 -6 7 M -6 7 L 5 -4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g></g><g data-motion-part="pin"><g transform="translate(249 188) scale(0.8)"><ellipse cy="5" rx="14" ry="4" fill="#287250" opacity=".15" /><path d="M 0 0 C -6 -9 -20 -22 -20 -34 A 20 20 0 1 1 20 -34 C 20 -22 6 -9 0 0 Z" fill="#287250" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(0 -34)"><path d="M -9 0 L 0 -8 L 9 0 M -6 -2 V 9 H 6 V -2 M -2 9 V 3 H 2 V 9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g></g><g data-motion-part="pin"><g transform="translate(415 130) scale(0.8)"><ellipse cy="5" rx="14" ry="4" fill="#287250" opacity=".15" /><path d="M 0 0 C -6 -9 -20 -22 -20 -34 A 20 20 0 1 1 20 -34 C 20 -22 6 -9 0 0 Z" fill="#287250" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><g transform="translate(0 -34)"><path d="M -6 7 Q -11 -7 8 -8 Q 12 7 -6 7 M -6 7 L 5 -4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g></g><rect x="48" y="123" width="97" height="24" rx="12" fill="white" stroke="none" /><text x="62" y="139" font-family="Arial, sans-serif" font-size="11" fill="#285840" font-weight="400">Experiências</text><rect x="201" y="205" width="100" height="24" rx="12" fill="white" stroke="none" /><text x="215" y="221" font-family="Arial, sans-serif" font-size="11" fill="#285840" font-weight="400">Comunidades</text><rect x="390" y="142" width="73" height="24" rx="12" fill="white" stroke="none" /><text x="405" y="158" font-family="Arial, sans-serif" font-size="11" fill="#285840" font-weight="400">Natureza</text></svg>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="status-badge">Parceria em desenvolvimento</span>
+              </div>
+              <h3 class="project-title">ECOnexão</h3>
+              <p class="project-highlight">Rotas e experiências de turismo na Amazônia.</p>
+              <p class="project-desc">A Pulso Dev colabora no desenvolvimento do ECOnexão, uma plataforma de turismo na Amazônia. O ECOnexão é um projeto parceiro, com identidade própria.</p>
+              <a href="https://app.econexaoturismo.com" class="link-action" target="_blank" rel="noopener noreferrer">
+                Acessar o ECOnexão <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+        <div class="pulso-dev-intro">
+          <img src="assets/images/pulso-dev-logo.png" alt="Pulso Dev" width="1254" height="1254" loading="lazy" decoding="async">
+          <div>
+            <h3>Pulso Dev</h3>
+            <p>É a nossa equipe de desenvolvimento. Criamos sites e aplicativos e ajudamos a construir o ECOnexão.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SOBRE A PULSO (Editorial) -->
+    <section id="sobre" class="about-section section-spacing" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-col-left">
+            <span class="eyebrow">SOBRE A PULSO</span>
+            <h2 id="about-title" class="section-headline">
+              A Pulso começou em Altamira.
+            </h2>
+          </div>
+          <div class="about-col-right">
+            <p>
+              Raíssa Rocha e Bruno Darwich criaram a Pulso em Altamira, no Pará, para trabalhar com análise de dados e desenvolver projetos ligados à vida na região.
+            </p>
+            <p>
+              Esse interesse aparece nos nossos projetos sobre a cidade e também nas consultorias. Ao analisar um problema, levamos em conta o que as pessoas que lidam com ele todos os dias têm a dizer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTATO (Conversão e Ação) -->
+    <section id="contato" class="contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <h2 id="contact-title" class="contact-headline">
+              Vamos falar sobre o seu projeto?
+            </h2>
+            <p class="contact-support">
+              Conte um pouco do que você está fazendo e de onde precisa de ajuda. Podemos conversar sobre uma consultoria ou uma parceria em um dos nossos projetos.
+            </p>
+            <p class="contact-aux">
+              Pode chamar mesmo que a ideia ainda esteja no começo.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <p id="contact-pending" class="contact-pending" role="status">Em breve, você poderá entrar em contato por aqui.</p>
+            <a href="#contato" class="btn btn-primary" data-contact-context="general" data-contact-type="whatsapp" hidden>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.27C8.94 7.27 8.67 7.33 8.44 7.58C8.21 7.83 7.57 8.43 7.57 9.65C7.57 10.87 8.46 12.05 8.58 12.21C8.71 12.38 10.33 14.87 12.8 15.94C13.39 16.19 13.84 16.34 14.2 16.45C14.79 16.64 15.33 16.61 15.75 16.55C16.22 16.48 17.2 15.96 17.41 15.38C17.61 14.79 17.61 14.3 17.55 14.19C17.49 14.08 17.33 14.02 17.08 13.89C16.84 13.77 15.65 13.18 15.43 13.1C15.21 13.02 15.05 12.98 14.89 13.23C14.72 13.47 14.26 14.02 14.12 14.19C13.98 14.35 13.84 14.37 13.6 14.25C13.35 14.12 12.56 13.86 11.62 13.02C10.88 12.37 10.39 11.56 10.24 11.31C10.1 11.07 10.23 10.93 10.35 10.81C10.46 10.7 10.6 10.51 10.73 10.36C10.85 10.22 10.89 10.11 10.97 9.95C11.05 9.79 11.01 9.64 10.95 9.52C10.89 9.4 10.42 8.24 10.22 7.77C10.03 7.31 9.83 7.37 9.68 7.36C9.54 7.36 9.38 7.27 9.11 7.27Z"/>
+              </svg>
+              <span>Conversar pelo WhatsApp</span>
+            </a>
+            <a href="#contato" class="btn btn-secondary" data-contact-context="general" data-contact-type="email" hidden>
+              Enviar um e-mail
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       RODAPÉ (Site Footer)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <img src="assets/images/pulso-logo-ui.svg" alt="Pulso" class="footer-logo" width="104" height="28">
+          <p class="footer-tagline">Dados, território e inovação.</p>
+          <p class="footer-origin">Altamira, Pará.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <a href="#solucoes">Soluções</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="current-year">2026</span> Pulso. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
