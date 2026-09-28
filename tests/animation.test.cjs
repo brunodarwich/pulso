@@ -14,7 +14,7 @@ function setup({ mobile = false, reduced = false } = {}) {
       getTotalLength: () => 100, getPointAtLength: x => ({ x, y: 0 }) };
   }
   const singles = Object.fromEntries(['.stage-container', '.stage-flow', '.stage-svg-canvas', '.zone-pulse-hub', '.pulse-symbol-stage', '.zone-structured-table', 'stage-control-btn', 'stage-control-text', 'stage-control-icon'].map(k => [k, element()]));
-  const lists = Object.fromEntries(Object.entries({ '.flow-path': 8, '.flow-particle': 8, '.stage-phase': 4, '.source-card': 4, '.stage-bar': 7, '.pulse-step-tag': 3, '.table-row': 2, '.output-card': 3 }).map(([k,n]) => [k, Array.from({length:n}, element)]));
+  const lists = Object.fromEntries(Object.entries({ '.flow-path': 8, '.flow-particle': 8, '.stage-phase': 4, '.source-card': 4, '.stage-bar': 7, '.pulse-step-tag': 3, '.table-row': 6, '.output-card': 3 }).map(([k,n]) => [k, Array.from({length:n}, element)]));
   const queries = [{ matches: mobile, addEventListener(n,fn) { this.change = fn; } }, { matches: reduced, addEventListener(n,fn) { this.change = fn; } }];
   let observer, callback, time = 0;
   const doc = { hidden: false, events: {}, querySelector: k => singles[k], querySelectorAll: k => lists[k] || [], getElementById: k => singles[k], addEventListener(n,fn) { this.events[n] = fn; } };
@@ -34,6 +34,9 @@ function setup({ mobile = false, reduced = false } = {}) {
     particle: i => Number(lists['.flow-particle'][i].style.opacity),
     revealed: i => lists['.output-card'][i].classList.contains('is-visible'),
     complete: () => lists['.output-card'].every(e=>e.classList.contains('is-visible')),
+    rowBlank: i => lists['.table-row'][i].classList.contains('is-blank'),
+    rowFilled: i => lists['.table-row'][i].classList.contains('is-filled'),
+    rowVisible: i => lists['.table-row'][i].classList.contains('is-visible'),
   };
 }
 test('movimento reduzido inicial mantém estado final e esconde controle', () => {
@@ -62,4 +65,38 @@ test('pulsos percorrem tabela e saídas antes da revelação, pausa conserva pos
   app.tick(800); assert.equal(app.revealed(0), true); assert.equal(app.revealed(2), false);
   app.tick(1800); assert.equal(app.complete(), true);
   app.click(); assert.equal(app.revealed(0), false); assert.equal(app.particle(5), 0);
+});
+
+test('tabela de 6 linhas exibe bloco em branco antes de cada preenchimento sequencial', () => {
+  const app = setup();
+  app.see(1);
+  app.tick(0);
+  // Antes da linha do fluxo se conectar à tabela (t = 4600ms < 4650ms): nenhuma linha visível
+  app.tick(4600);
+  assert.equal(app.rowVisible(0), false);
+  assert.equal(app.rowBlank(0), false);
+  assert.equal(app.rowFilled(0), false);
+
+  // Logo após a linha se conectar (t = 4700ms > 4650ms): linha 0 está no estado bloco em branco (is-blank=true, is-filled=false)
+  app.tick(100); // 4700ms
+  assert.equal(app.rowVisible(0), true);
+  assert.equal(app.rowBlank(0), true);
+  assert.equal(app.rowFilled(0), false);
+  assert.equal(app.rowVisible(1), false);
+
+  // Aos 4950ms: linha 0 preenchida (is-filled=true), linha 1 entra em bloco em branco
+  app.tick(250); // 4950ms
+  assert.equal(app.rowFilled(0), true);
+  assert.equal(app.rowBlank(0), false);
+  assert.equal(app.rowVisible(1), true);
+  assert.equal(app.rowBlank(1), true);
+  assert.equal(app.rowFilled(1), false);
+
+  // Avança até 6200ms: todas as 6 linhas preenchidas
+  app.tick(1250); // 6200ms
+  for (let i = 0; i < 6; i++) {
+    assert.equal(app.rowVisible(i), true, `linha ${i} deve estar visível`);
+    assert.equal(app.rowFilled(i), true, `linha ${i} deve estar preenchida`);
+    assert.equal(app.rowBlank(i), false, `linha ${i} não deve estar em branco`);
+  }
 });

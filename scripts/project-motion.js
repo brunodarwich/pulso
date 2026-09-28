@@ -22,13 +22,22 @@
     if ([...active.values()].includes(card)) return;
     card.querySelectorAll('[data-motion-part]').forEach((part, index) => {
       const kind = part.dataset.motionPart;
-      const delay = Math.min(index * 65, 260);
+      const delay = Math.min(index * 40, 360);
       if (kind === 'route') {
         animate(part, [{ strokeDashoffset: 22, opacity: .5 }, { strokeDashoffset: 0, opacity: 1 }],
           { duration: 1000, delay }, card);
       } else if (kind === 'bar') {
         animate(part, [{ transform: 'scaleY(.65)', opacity: .6 }, { transform: 'scaleY(1)', opacity: 1 }],
           { duration: 700, delay }, card);
+      } else if (kind === 'lens') {
+        animate(part, [{ transform: 'translate(-10px, -7px) scale(.94)', opacity: .55 }, { transform: 'translate(0, 0) scale(1)', opacity: 1 }],
+          { duration: 750, delay }, card);
+      } else if (kind === 'sheet-back') {
+        animate(part, [{ transform: 'translate(-5px, 3px)', opacity: .5 }, { transform: 'translate(0, 0)', opacity: 1 }],
+          { duration: 650, delay }, card);
+      } else if (kind === 'sheet-mid') {
+        animate(part, [{ transform: 'translate(-2.5px, 1.5px)', opacity: .6 }, { transform: 'translate(0, 0)', opacity: 1 }],
+          { duration: 650, delay }, card);
       } else {
         animate(part, [{ transform: 'translateY(5px)', opacity: .55 }, { transform: 'translateY(0)', opacity: 1 }],
           { duration: 650, delay }, card);

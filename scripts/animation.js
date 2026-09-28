@@ -421,12 +421,13 @@
     // One clock drives every visual, including pause and replay.
     const routes = [
       [450, 1600], [850, 1600], [1250, 1600], [1650, 1600],
-      [4000, 1350], [6050, 1100], [6550, 1100], [7050, 1100]
+      [3750, 900], [6050, 1100], [6550, 1100], [7050, 1100]
     ];
     function render(progress) {
       const timeMs = progress * 9000;
       const clamp = value => Math.max(0, Math.min(1, value));
-      const phase = timeMs < 3000 ? 0 : timeMs < 4500 ? 1 : timeMs < 6050 ? 2 : 3;
+      const arrivalTable = routes[4][0] + routes[4][1];
+      const phase = timeMs < 3000 ? 0 : timeMs < arrivalTable ? 1 : timeMs < 6050 ? 2 : 3;
       phases.forEach((item, i) => {
         const step = Number(item.dataset.stagePhase);
         item.classList.toggle('is-current', progress < 1 && step === phase);
@@ -456,7 +457,7 @@
       });
       const processing = timeMs >= 1800 && timeMs < 4600;
       hubZone.classList.toggle('is-processing', processing);
-      tableZone.classList.toggle('is-receiving', timeMs >= 4400 && timeMs < 6050);
+      tableZone.classList.toggle('is-receiving', timeMs >= arrivalTable && timeMs < 6050);
       bars.forEach((bar, i) => {
         const envelope = Math.sin(Math.PI * clamp((timeMs - 1800) / 2800));
         const scale = 1 + Math.sin(timeMs / 180 - i * .65) * .3 * envelope;
@@ -465,7 +466,13 @@
       tags.forEach((tag, i) => {
         tag.classList.toggle('is-active', processing && Math.min(2, Math.floor((timeMs - 1800) / 934)) === i);
       });
-      rows.forEach((row, i) => row.classList.toggle('is-visible', timeMs >= 5200 + i * 350));
+      rows.forEach((row, i) => {
+        const tBlank = arrivalTable + 10 + i * 235;
+        const tFill = tBlank + 195;
+        row.classList.toggle('is-blank', timeMs >= tBlank && timeMs < tFill);
+        row.classList.toggle('is-filled', timeMs >= tFill);
+        row.classList.toggle('is-visible', timeMs >= tBlank);
+      });
       outputs.forEach((output, i) => {
         const arrival = routes[i + 5][0] + routes[i + 5][1];
         output.classList.toggle('is-visible', timeMs >= arrival);
@@ -537,6 +544,11 @@
       else if (state === 'paused' && autoPaused) play();
       else if (!started && readyToStart && !mobile.matches && !reduced.matches) play();
     }
+
+    window.__stageRender = (p) => {
+      stage.classList.add('is-animating');
+      render(p);
+    };
 
     button.addEventListener('click', () => state === 'playing' ? pause() : play());
     document.addEventListener('visibilitychange', syncVisibility);
